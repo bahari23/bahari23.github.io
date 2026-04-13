@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nickson | Web Developer & E-commerce Specialist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Nick<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-circle1"></div>
+    <div class="hero-circle2"></div>
+    <div class="hero-grid">
+      <div>
+        <div class="uni-badge"><i class="fas fa-graduation-cap"></i> Cooperative University of Kenya</div>
+        <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Based in Kenya</div>
+        <h1 class="hero-name">Hi, I'm <span class="typed-name" id="typedName"></span><span class="cursor">|</span></h1>
+        <p class="hero-role">Software Engineer &amp; Web Developer</p>
+        <p class="hero-tagline">I build modern websites, online stores, and SEO-optimized platforms. Passionate about Java, MySQL, and everything web.</p>
+        <div class="hero-btns">
+          <a href="contact.html" class="btn-primary">Hire Me 🚀</a>
+          <a href="projects.html" class="btn-outline-white">View Projects</a>
+        </div>
+        <div class="hero-stats">
+          <div><div class="stat-num">50+</div><div class="stat-label">Projects Done</div></div>
+          <div><div class="stat-num">3+</div><div class="stat-label">Years Coding</div></div>
+          <div><div class="stat-num">100%</div><div class="stat-label">Client Satisfaction</div></div>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-frame" id="profileFrame">
+          <img src="images/Nickson.JPG" alt="Nickson" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES TEASER -->
+  <section id="services-teaser">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">What I Do</div>
+        <h2 class="section-title">Services I <span>offer</span></h2>
+        <p class="section-desc">From design to deployment — I cover everything your business needs online.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <i class="fas fa-laptop-code"></i>
+          <h4>Website Development</h4>
+          <p>Fast, responsive, professional websites built for performance and conversions.</p>
+        </div>
+        <div class="service-card reveal">
+          <i class="fas fa-shopping-cart"></i>
+          <h4>E-commerce Stores</h4>
+          <p>WordPress, WooCommerce & Shopify stores with payment integration.</p>
+        </div>
+        <div class="service-card reveal">
+          <i class="fab fa-java"></i>
+          <h4>Java Development</h4>
+          <p>Backend applications, OOP systems, and desktop apps built with Java.</p>
+        </div>
+        <div class="service-card reveal">
+          <i class="fas fa-database"></i>
+          <h4>MySQL & Databases</h4>
+          <p>Database design, queries, optimization, and backend data management.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="container reveal">
+      <h2>Ready to build something great?</h2>
+      <p>Let's work together to bring your vision to life online.</p>
+      <a href="contact.html" class="btn-white">Get In Touch →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Nick<span>.</span></div>
+    <p>© <span id="year"></span> Nickson. Built with ❤️ in Nairobi, Kenya.</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/nickson-bahari-75ab64363/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/bahari23/" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/Optimus5448431" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/254798544547" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ===== TYPING ANIMATION =====
+    const words = ['Nickson', 'a Developer', 'an Engineer', 'a Problem Solver'];
+    let wordIndex = 0, charIndex = 0, deleting = false;
+    const el = document.getElementById('typedName');
+
+    function type() {
+      const current = words[wordIndex];
+      if (!deleting) {
+        el.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === current.length) {
+          deleting = true;
+          setTimeout(type, wordIndex === 0 ? 2200 : 1400);
+          return;
+        }
+      } else {
+        el.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+        if (charIndex === 0) {
+          deleting = false;
+          wordIndex = (wordIndex + 1) % words.length;
+        }
+      }
+      setTimeout(type, deleting ? 60 : 110);
+    }
+    setTimeout(type, 800);
+  </script>
+</html>

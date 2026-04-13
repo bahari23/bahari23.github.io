@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Nickson - Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Nick<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-tag">Portfolio</div>
+    <h1>Featured <span>Projects</span></h1>
+    <p>Real websites built for real businesses — from online stores to professional portfolios.</p>
+  </div>
+
+  <!-- PROJECTS SECTION -->
+  <section id="projects">
+    <div class="container">
+      <!-- Filter buttons -->
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('wordpress', this)">WordPress</button>
+        <button class="filter-btn" onclick="filterProjects('shopify', this)">Shopify</button>
+        <button class="filter-btn" onclick="filterProjects('elementor', this)">Elementor</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+
+        <div class="project-card reveal" data-category="wordpress woocommerce">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=700&q=80" alt="Electronics Online Store" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tools">
+              <span class="tool-badge">WordPress</span>
+              <span class="tool-badge">WooCommerce</span>
+            </div>
+            <h3 class="project-title">Electronics Online Store</h3>
+            <p class="project-desc">A full e-commerce store for consumer electronics with product filtering, M-Pesa payments, and mobile-friendly design. Increased client sales by 40% in 3 months.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="wordpress elementor">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="Real Estate Website" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tools">
+              <span class="tool-badge">WordPress</span>
+              <span class="tool-badge">Elementor</span>
+            </div>
+            <h3 class="project-title">Real Estate Website</h3>
+            <p class="project-desc">A property listing platform with advanced search, filters, virtual tour integration, and WhatsApp inquiry buttons for faster lead generation.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="shopify">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700&q=80" alt="Shoe Online Store" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tools">
+              <span class="tool-badge">Shopify</span>
+            </div>
+            <h3 class="project-title">Shoe Online Store</h3>
+            <p class="project-desc">A sleek fashion e-commerce store with size guides, variant selectors, Instagram feed integration, and Stripe checkout. Fully mobile-optimized.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="wordpress elementor">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&q=80" alt="Interior Design Website" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tools">
+              <span class="tool-badge">WordPress</span>
+              <span class="tool-badge">Elementor</span>
+            </div>
+            <h3 class="project-title">Interior Design Website</h3>
+            <p class="project-desc">A visually stunning portfolio site for an interior design studio with project galleries, service pages, and an integrated booking form.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="shopify">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&q=80" alt="Tech Accessories Store" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tools">
+              <span class="tool-badge">Shopify</span>
+            </div>
+            <h3 class="project-title">Tech Accessories Store</h3>
+            <p class="project-desc">A focused niche store selling phone accessories and gadgets, with upsell features, bundle offers, and fast checkout flow.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="project-card reveal" data-category="wordpress">
+          <div class="project-img-wrap">
+            <img class="project-img" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=700&q=80" alt="Business Corporate Website" />
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-tools">
+              <span class="tool-badge">WordPress</span>
+              <span class="tool-badge">SEO</span>
+            </div>
+            <h3 class="project-title">Corporate Business Website</h3>
+            <p class="project-desc">A professional multi-page corporate website with services, team, blog, and contact pages — optimized for Google rankings in Nairobi.</p>
+            <a href="#" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECT CTA -->
+  <section id="project-cta">
+    <div class="container reveal">
+      <h2>Have a project in mind?</h2>
+      <p>Let's collaborate and build something amazing together.</p>
+      <a href="contact.html" class="btn-primary">Start a Project →</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Nick<span>.</span></div>
+    <p>© <span id="year"></span> Nickson. Built with ❤️ in Nairobi, Kenya.</p>
+    <div class="footer-socials">
+      <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/254700000000" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    function filterProjects(category, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards
+      document.querySelectorAll('.project-card').forEach(card => {
+        const cats = card.dataset.category || '';
+        if (category === 'all' || cats.includes(category)) {
+          card.style.display = '';
+          setTimeout(() => card.classList.add('visible'), 50);
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

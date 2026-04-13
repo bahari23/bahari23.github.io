@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Nickson - Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Nick<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" onclick="toggleNav()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-tag">Get In Touch</div>
+    <h1>Let's work <span>together</span></h1>
+    <p>Ready to build or upgrade your website? Send a message and I'll respond within 24 hours.</p>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <!-- LEFT: Info + FAQ -->
+        <div class="contact-info">
+          <div class="contact-card reveal">
+            <h3>📬 Contact Details</h3>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-text">
+                <h5>Email</h5>
+                <a href="mailto:optimus9653@gmail.com">optimus9653@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-text">
+                <h5>Phone / WhatsApp</h5>
+                <a href="tel:+254798544547">+254 798 544 547</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-text">
+                <h5>Location</h5>
+                <p>Nairobi, Kenya 🇰🇪</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-text">
+                <h5>Response Time</h5>
+                <p>Within 24 hours (Mon – Sat)</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/254798544547?text=Hi%20Nickson%2C%20I%27d%20like%20to%20discuss%20a%20project" target="_blank" class="wa-btn reveal">
+            <i class="fab fa-whatsapp" style="font-size: 1.2rem;"></i>
+            Chat on WhatsApp Now
+          </a>
+
+          <div class="contact-card reveal">
+            <h3>❓ Frequently Asked</h3>
+            <div class="faq">
+              <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">How long does a website take? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Most websites take 5–14 days depending on complexity. E-commerce stores may take 2–3 weeks.</div>
+              </div>
+              <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Do you offer M-Pesa integration? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes! I integrate M-Pesa (Daraja API) for WooCommerce and custom websites for seamless local payments.</div>
+              </div>
+              <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">What's the starting price? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Basic websites start from KSh 15,000. E-commerce stores start from KSh 30,000. Custom quotes available.</div>
+              </div>
+              <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-q">Do you provide support after launch? <i class="fas fa-chevron-down"></i></div>
+                <div class="faq-a">Yes! I offer 30 days of free support after every project and affordable monthly maintenance packages.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: Contact Form -->
+        <div class="contact-form reveal">
+          <h3>Send me a message 💬</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" id="fname" placeholder="Optimus" />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" id="lname" placeholder="Prime" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="email" placeholder="primewebsolutions@gmail.com" />
+          </div>
+          <div class="form-group">
+            <label>Phone / WhatsApp</label>
+            <input type="tel" id="phone" placeholder="+254 798 544 547" />
+          </div>
+          <div class="form-group">
+            <label>Service Needed</label>
+            <select id="service">
+              <option value="">— Select a service —</option>
+              <option>Business Website</option>
+              <option>E-commerce / Online Store</option>
+              <option>WordPress Development</option>
+              <option>Shopify Store</option>
+              <option>SEO Optimization</option>
+              <option>Website Redesign</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message</label>
+            <textarea id="message" placeholder="Tell me about your project — what you need, your budget, and timeline..."></textarea>
+          </div>
+          <button class="form-submit" onclick="submitForm()">Send Message →</button>
+          <p class="form-note">🔒 Your information is private and will never be shared.</p>
+          <div class="success-msg" id="successMsg">
+            <i class="fas fa-check-circle"></i>
+            <p>Message sent! I'll get back to you within 24 hours. 🚀</p>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Nick<span>.</span></div>
+    <p>© <span id="year"></span> Nickson. Built with ❤️ in Nairobi, Kenya.</p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/nickson-bahari-75ab64363/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/bahari23/" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://x.com/Optimus5448431" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/254798544547" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    function toggleFaq(item) {
+      item.classList.toggle('open');
+    }
+    function submitForm() {
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      if (!email || !message) {
+        alert('Please fill in your email and message.');
+        return;
+      }
+      document.getElementById('successMsg').style.display = 'block';
+      document.querySelector('.form-submit').disabled = true;
+      document.querySelector('.form-submit').textContent = 'Sent ✓';
+    }
+  </script>
+</body>
+</html>
