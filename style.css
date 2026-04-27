@@ -270,13 +270,13 @@ footer p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1400&q=80');
+  background-image: url('images/code.jpg');
   background-size: cover; background-position: center;
-  opacity: 0.10;
+  opacity: 0.4;
 }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(10,22,40,0.97) 45%, rgba(26,58,110,0.85) 100%);
+  background: linear-gradient(135deg, rgba(34, 81, 148, 0.6) 45%, rgba(21, 50, 96, 0.4) 100%);
 }
 .hero-circle1 {
   position: absolute; width: 520px; height: 520px; border-radius: 50%;
